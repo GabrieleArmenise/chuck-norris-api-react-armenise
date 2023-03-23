@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import Title from './Title'
+import Title from './component/Title'
 import './styles/App.css'
-import Button from './Button';
+import Button from './component/Button';
 
 
 function App() {
@@ -33,7 +33,7 @@ function App() {
 
         </button>
 
-        <Button text="Carica Joke" callback={loadTextCallback}></Button>
+        <Button text="Carica Joke" callback={loadJokeCallback}></Button>
 
         <Button text="Copia Joke" variant = {joke=== "" ? "disabled" : undefined} callback={copyTextCallback}></Button>
 
