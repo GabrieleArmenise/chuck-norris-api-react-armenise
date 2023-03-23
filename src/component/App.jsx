@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import Title from './component/Title'
+import Title from './Title'
 import './styles/App.css'
-import Button from './component/Button';
+import Button from './Button';
 
 
 function App() {
