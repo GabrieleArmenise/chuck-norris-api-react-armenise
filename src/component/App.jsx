@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import Title from './component/Title'
-import './styles/App.css'
-import Button from './component/Button';
+import Title from './Title'
+import '../styles/App.css'
+import Button from './Button';
 
 
 function App() {
@@ -16,6 +16,17 @@ function App() {
     console.log()
   }
 
+  let copyTextCallback = function(){
+    async function copyContent(s) {
+      try {
+        await navigator.clipboard.writeText(s);
+        console.log('Content copied to clipboard');
+      } catch (err) {
+        console.error('Failed to copy: ', err);
+      }
+    }
+  }
+
   return (
     <div className="App">
 
@@ -25,7 +36,7 @@ function App() {
 
       <p> Lorem, ipsum...</p>
 
-      <div class="card">
+      <div className="card">
 
         <button onClick ={() => setCount (( count) => count + 1 )}>
 
@@ -37,7 +48,7 @@ function App() {
 
         <Button text="Copia Joke" variant = {joke=== "" ? "disabled" : undefined} callback={copyTextCallback}></Button>
 
-        <Button variant={ joke === "" ? "hover" : undefined } calllback={loadTextCallback}></Button>
+        
 
 
       </div>
