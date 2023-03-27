@@ -1,25 +1,15 @@
-import {useState} from 'react'
-import reactLogo from '.assets/react.svg'
+import { useState } from 'react'
+import '../styles/Dropdown.css'
 
+function Dropdown(props) {
 
-function Dropdown({ options , variant}){
-    let classRenderer = function(){
-        let classes = [
-            "Dropdown", variant
-        ]
-
-        return classes.join(" ")
-        
-    }
-
-    return(
-
-        <div className={classRenderer()}>
-        <select name="JokeType" id="JokeType" defaultValue={"Scegli un'opzione"}>
-        <option disabled> Scegli un'opzione </option>
-        {options.map((ele, id) => {return <option key={id} value={ele}>{ele}</option>})}
-
+  return (
+    <div className="Dropdown">
+        <select id={props.id}>
+        {props.values.map((el,index)=> {return <option value={el} key={index}>{el}</option>})}
         </select>
-        </div>
-    )
+    </div>
+  )
 }
+
+export default Dropdown

@@ -1,28 +1,30 @@
-import {useState} from 'react'
+import { useState } from 'react'
 import '../styles/Button.css'
 
+function Button(props) {
 
-function Button ({ text, variant, callback}) {
-    let classRenderer = function(){
-        let classes = [
-            'Button' , 'text-center' , 'align-left' , variant
-        ]
+  function defaultCallback(){
+  }
 
-        return classes.join(" ")
+  function onButtonClick(){
 
+    if(props.callback && props.variant!=="disabled")
+    {
+      props.callback();
+    }
+    
+    else
+    {
+      defaultCallback();
     }
 
-    let clickHandler
+  }
 
-
-
-
-    return (
-        <div className={classRenderer()}>
-            {text}
-        </div>
-    )
+  return (
+    <div className="Button">
+        <button className={"Button" + (props.variant!==undefined ? " disabled" : "")} id={props.id} onClick={onButtonClick}>{props.children}</button>
+    </div>
+  )
 }
-
 
 export default Button
