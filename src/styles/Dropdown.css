@@ -1,6 +1,18 @@
-select{
-    background-color: #A6D9F7;
-    font-size: 20px;
-    font-family: "RocknRoll One", sans-serif; 
-    margin-top: 1rem;
+.Dropdown select{
+    background-color: white;
+    color: purple;
+    min-width: 160px;
+    font-size: 17px;
+    padding: 12px 16px;
+    font-weight: 50;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+    margin: 10px;
+    border-color: black;
+    border-radius: 10px;
+    
+}
+
+.Dropdown select:hover{
+    color: #000000;
 }

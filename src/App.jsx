@@ -57,14 +57,15 @@ function App() {
     <div className="App">
       <Title>Chuck Norris Joke Generator</Title>
    
-            <Button id='generate' callback={generateJoke}>Genera Joke</Button>
-            <Dropdown id='dropdown' values={categories}></Dropdown>
+            <Button id='generate' callback={generateJoke}>Genera Joke</Button><br></br>
+            <b><Dropdown id='dropdown' values={categories}></Dropdown></b>
+            <br></br>
          
-            <JokeText id='JokeText'>{joke}</JokeText>
+            
 
 
           <Button id='clipboard' callback={copyJoke} variant={clicked === true ? undefined : "disabled"}>Copy</Button>
-
+          <JokeText id='JokeText'>{joke}</JokeText>
     </div>
   )
 }

@@ -8,7 +8,7 @@ function Title() {
 
   return (
     <div className="Title">
-      <h1>Benvenuto, Chuck-Norris-API</h1>
+      <h1>Benvenuto, Chuck-Norris-API Joke Generation</h1>
     </div>
   )
 }
